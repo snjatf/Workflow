@@ -26,5 +26,17 @@ namespace Workflow.Controllers
 
             return View();
         }
+        public ActionResult mytest()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            var obj = new
+            {
+                Name = "wonder4",
+                Id = 1
+            };
+            return Json(obj,JsonRequestBehavior.AllowGet);
+            //return Content(obj.ToString());
+        }
     }
 }
